@@ -1,0 +1,25 @@
+data_aul = read.csv("C:/Users/nurul/Downloads/Aul.csv", sep = ",")
+View(data_aul)
+aul<-data_aul[data_aul$tinggi.badan==160,]
+View(aul)
+data_aul$tinggi.badan<-ifelse(data_aul$tinggi.badan>160,c("tinggi"),("pendek"))
+View(aull)
+data_aul$Jurusan<-c("Infor20")
+data_aul$Fakultas<-c("FTI")
+View(data_aul)
+data_aul$Fakultas<-NULL
+View(data_aul)
+data_aul.kolom1dan2<-data_aul[,1:2]
+View(data_aul.kolom1dan2)
+data_aul.kolom3dan4<-data_aul[,3:4]
+View(data_aul.kolom3dan4)
+data_aul.kolom1sd4<-cbind(data_aul.kolom1dan2,data_aul.kolom3dan4)
+View(data_aul.kolom1sd4)
+data_aul.baris1sd5<-data_aul[1:5,]
+View(data_aul.baris1sd5)
+data_aul.baris25sd30<-data_aul[25:30,]
+View(data_aul.baris25sd30)
+data_aul.baris1sd5dan25sd30<-rbind(data_aul.baris1sd5,data_aul.baris25sd30)
+View(data_aul.baris1sd5dan25sd30)
+data_aul.sort<-data_aul[order(data_aul$waktu.perjalanan),]
+View(data_aul.sort)
