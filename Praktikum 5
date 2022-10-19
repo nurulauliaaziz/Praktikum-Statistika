@@ -1,0 +1,7 @@
+aul=read.delim("clipboard")
+View(aul)
+str(aul)
+
+mean(aul$Pendapatan)
+
+t.test (aul$Pendapatan, mu=10)
